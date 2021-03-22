@@ -21,7 +21,7 @@ class HomeDesktop extends StatelessWidget {
             top: width < 1200 ? height * 0.1 : height * 0.05,
             right: width * 0.01,
             child: Opacity(
-              opacity: 0.85,
+              opacity: 0.9,
               child: EntranceFader(
                 offset: Offset(0, 0),
                 delay: Duration(seconds: 1),

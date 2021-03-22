@@ -21,7 +21,7 @@ class ContactMobile extends StatelessWidget {
             ),
           ),
           Text(
-            "Here are few samples of my previous work :)\n\n",
+            "Let's get in touch and build something together :)\n\n",
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
             textAlign: TextAlign.center,
           ),

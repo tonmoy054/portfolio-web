@@ -71,9 +71,9 @@ final kServicesDescriptions = [
 ];
 
 final kServicesLinks = [
-  "https://www.fiverr.com/hamza6shakeel",
-  "https://www.fiverr.com/hamza6shakeel",
-  "https://www.fiverr.com/hamza6shakeel",
+  "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
+  "https://www.fiverr.com/hamza6shakeel/get-you-modern-ui-design-using-adobe-xd",
+  "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
   "https://mhamzadev.medium.com",
   "https://github.com/m-hamzashakeel"
 ];
