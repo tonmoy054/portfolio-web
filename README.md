@@ -1,4 +1,4 @@
-## Live Resume - Flutter for web
+## Responsive Live Resume using Flutter for web
 
 Link: https://m-hamzashakeel.github.io/folio
 
