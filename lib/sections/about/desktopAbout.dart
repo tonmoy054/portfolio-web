@@ -1,6 +1,6 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/constants.dart';
+import 'package:folio/sections/navBar/navBarLogo.dart';
 import 'package:folio/widget/aboutMeText.dart';
 import 'package:folio/widget/communityIconBtn.dart';
 import 'package:folio/widget/toolsTech.dart';
@@ -49,7 +49,7 @@ class AboutDesktop extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: height * 0.05,
+            height: height * 0.055,
           ),
           Row(
             children: [
@@ -62,21 +62,9 @@ class AboutDesktop extends StatelessWidget {
               Expanded(
                 child: Container(),
               ),
-              Text(
-                "</ ",
-                style: TextStyle(fontSize: 22),
-              ),
-              TyperAnimatedTextKit(
-                isRepeatingAnimation: true,
-                speed: Duration(milliseconds: 50),
-                textStyle:
-                    TextStyle(fontFamily: "Agustina", fontSize: height * 0.05),
-                text: [" Hamza "],
-              ),
-              Text(
-                " >\t\t",
-                style: TextStyle(fontSize: 22),
-              ),
+              NavBarLogo(
+                height: height * 0.04,
+              )
             ],
           )
         ],

@@ -1,6 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
+import 'package:universal_html/html.dart' as html;
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/animations/entranceFader.dart';
 import 'package:folio/constants.dart';
@@ -8,11 +9,12 @@ import 'package:folio/sections/about/about.dart';
 import 'package:folio/sections/contact/contact.dart';
 import 'package:folio/sections/home/home.dart';
 import 'package:folio/sections/navBar/navBarLogo.dart';
-import 'package:folio/sections/openSource/openSource.dart';
+import 'package:folio/sections/portfolio/portfolio.dart';
 import 'package:folio/sections/services/services.dart';
 import 'package:folio/widget/arrowOnTop.dart';
 import 'package:folio/widget/footer.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -20,11 +22,10 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final _scrollController = ScrollController();
-
-  _animateToIndex(i) =>
-      _scrollController.animateTo(MediaQuery.of(context).size.height * i,
-          duration: Duration(seconds: 2), curve: Curves.fastOutSlowIn);
+  ScrollController _scrollController =
+      ScrollController(initialScrollOffset: 25.0);
+  ItemScrollController _itemScrollController = ItemScrollController();
+  ItemPositionsListener _itemPositionListener = ItemPositionsListener.create();
 
   final List<String> _sectionsName = [
     "Home",
@@ -33,6 +34,18 @@ class _MainPageState extends State<MainPage> {
     "Projects",
     "Contact"
   ];
+
+  final List<IconData> _sectionsIcons = [
+    Icons.home,
+    Icons.person,
+    Icons.settings,
+    Icons.build,
+    Icons.phone,
+  ];
+
+  void _scroll(int i) {
+    _itemScrollController.scrollTo(index: i, duration: Duration(seconds: 1));
+  }
 
   Widget sectionWidget(int i) {
     if (i == 0) {
@@ -51,7 +64,7 @@ class _MainPageState extends State<MainPage> {
       );
     } else if (i == 6) {
       return ArrowOnTop(
-        onPressed: () => _animateToIndex(0),
+        onPressed: () => _scroll(0),
       );
     } else if (i == 7) {
       return Footer();
@@ -76,11 +89,13 @@ class _MainPageState extends State<MainPage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: RawScrollbar(
+          controller: _scrollController,
           thumbColor: kPrimaryColor,
           thickness: 5.0,
-          child: ListView.builder(
+          child: ScrollablePositionedList.builder(
+            itemScrollController: _itemScrollController,
+            itemPositionsListener: _itemPositionListener,
             itemCount: 8,
-            controller: _scrollController,
             itemBuilder: (context, index) {
               return sectionWidget(index);
             },
@@ -90,7 +105,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  Widget _appBarActions(String childText, int index) {
+  Widget _appBarActions(String childText, int index, IconData icon) {
     return MediaQuery.of(context).size.width > 760
         ? EntranceFader(
             offset: Offset(0, -20),
@@ -100,7 +115,7 @@ class _MainPageState extends State<MainPage> {
               padding: const EdgeInsets.all(8.0),
               child: MaterialButton(
                 hoverColor: kPrimaryColor,
-                onPressed: () => _animateToIndex(index),
+                onPressed: () => _scroll(index),
                 child: Text(
                   childText,
                   style: TextStyle(color: Colors.white),
@@ -111,13 +126,15 @@ class _MainPageState extends State<MainPage> {
         : Padding(
             padding: const EdgeInsets.all(8.0),
             child: MaterialButton(
-              hoverColor: kPrimaryColor,
-              onPressed: () => _animateToIndex(index),
-              child: Text(
-                childText,
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+                hoverColor: kPrimaryColor,
+                onPressed: () => _scroll(index),
+                child: ListTile(
+                  leading: Icon(
+                    icon,
+                    color: kPrimaryColor,
+                  ),
+                  title: Text(childText),
+                )),
           );
   }
 
@@ -141,7 +158,7 @@ class _MainPageState extends State<MainPage> {
             ),
       actions: [
         for (int i = 0; i < _sectionsName.length; i++)
-          _appBarActions(_sectionsName[i], i),
+          _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
         EntranceFader(
           offset: Offset(0, -20),
           delay: Duration(seconds: 3),
@@ -173,84 +190,46 @@ class _MainPageState extends State<MainPage> {
 
   Widget _appBarMobile() {
     return Drawer(
-      child: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
-        children: [
-          Center(
-            child: NavBarLogo(
-              height: 28,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 25.0, 0, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: NavBarLogo(
+                height: 28,
+              ),
             ),
-          ),
-          for (int i = 0; i < _sectionsName.length; i++)
-            _appBarActions(_sectionsName[i], i),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: MaterialButton(
-              hoverColor: kPrimaryColor.withAlpha(150),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5.0),
-                  side: BorderSide(color: kPrimaryColor)),
-              onPressed: () {
-                html.window.open(
-                    'https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE',
-                    "pdf");
-              },
-              child: Text(
-                "Resume",
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w200,
+            for (int i = 0; i < _sectionsName.length; i++)
+              _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                hoverColor: kPrimaryColor.withAlpha(150),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                    side: BorderSide(color: kPrimaryColor)),
+                onPressed: () {
+                  launchURL(
+                      "https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE");
+                },
+                child: ListTile(
+                  leading: Icon(
+                    Icons.book,
+                    color: Colors.red,
+                  ),
+                  title: Text(
+                    "Resume",
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w200,
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  bool isHover = false;
-  Widget _arrowOnTop() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        InkWell(
-          onTap: () => _animateToIndex(0),
-          onHover: (isHovering) {
-            if (isHovering) {
-              setState(() {
-                isHover = true;
-              });
-            } else {
-              setState(() {
-                isHover = false;
-              });
-            }
-          },
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.grey[900],
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(8.0),
-                bottomLeft: Radius.circular(8.0),
-              ),
-              boxShadow: isHover
-                  ? [
-                      BoxShadow(
-                        color: kPrimaryColor.withAlpha(200),
-                        blurRadius: 12.0,
-                        offset: Offset(2.0, 3.0),
-                      )
-                    ]
-                  : [],
-            ),
-            child: Icon(
-              Icons.arrow_drop_up_outlined,
-              color: kPrimaryColor,
-              size: MediaQuery.of(context).size.height * 0.05,
-            ),
-          ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

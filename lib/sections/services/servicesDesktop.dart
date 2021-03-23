@@ -16,7 +16,7 @@ class ServiceDesktop extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            width < 1200 ? "\nWhat I Do\n\n" : "\nWhat I Do",
+            "\nWhat I Do",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.06,
               fontWeight: FontWeight.w100,
@@ -36,8 +36,8 @@ class ServiceDesktop extends StatelessWidget {
                 children: [
                   WidgetAnimator(
                     child: ServiceCard(
-                      cardWidth: width < 1200 ? width * 0.3 : width * 0.25,
-                      cardHeight: width < 1200 ? height * 0.45 : height * 0.35,
+                      cardWidth: width < 1200 ? width * 0.3 : width * 0.22,
+                      cardHeight: width < 1200 ? height * 0.4 : height * 0.35,
                       serviceIcon: kServicesIcons[0],
                       serviceTitle: kServicesTitles[0],
                       serviceDescription: kServicesDescriptions[0],
@@ -49,8 +49,8 @@ class ServiceDesktop extends StatelessWidget {
                   ),
                   WidgetAnimator(
                     child: ServiceCard(
-                      cardWidth: width < 1200 ? width * 0.3 : width * 0.25,
-                      cardHeight: width < 1200 ? height * 0.45 : height * 0.35,
+                      cardWidth: width < 1200 ? width * 0.3 : width * 0.22,
+                      cardHeight: width < 1200 ? height * 0.4 : height * 0.35,
                       serviceIcon: kServicesIcons[1],
                       serviceTitle: kServicesTitles[1],
                       serviceDescription: kServicesDescriptions[1],
@@ -62,8 +62,8 @@ class ServiceDesktop extends StatelessWidget {
                   ),
                   WidgetAnimator(
                     child: ServiceCard(
-                      cardWidth: width < 1200 ? width * 0.3 : width * 0.25,
-                      cardHeight: width < 1200 ? height * 0.45 : height * 0.35,
+                      cardWidth: width < 1200 ? width * 0.3 : width * 0.22,
+                      cardHeight: width < 1200 ? height * 0.4 : height * 0.35,
                       serviceIcon: kServicesIcons[2],
                       serviceTitle: kServicesTitles[2],
                       serviceDescription: kServicesDescriptions[2],
@@ -73,15 +73,15 @@ class ServiceDesktop extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: height * 0.06,
+                height: height * 0.04,
               ),
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   WidgetAnimator(
                     child: ServiceCard(
-                      cardWidth: width < 1200 ? width * 0.3 : width * 0.25,
-                      cardHeight: width < 1200 ? height * 0.45 : height * 0.35,
+                      cardWidth: width < 1200 ? width * 0.3 : width * 0.22,
+                      cardHeight: width < 1200 ? height * 0.4 : height * 0.35,
                       serviceIcon: kServicesIcons[3],
                       serviceTitle: kServicesTitles[3],
                       serviceDescription: kServicesDescriptions[3],
@@ -93,8 +93,8 @@ class ServiceDesktop extends StatelessWidget {
                   ),
                   WidgetAnimator(
                     child: ServiceCard(
-                      cardWidth: width < 1200 ? width * 0.3 : width * 0.25,
-                      cardHeight: width < 1200 ? height * 0.45 : height * 0.35,
+                      cardWidth: width < 1200 ? width * 0.3 : width * 0.22,
+                      cardHeight: width < 1200 ? height * 0.4 : height * 0.35,
                       serviceIcon: kServicesIcons[4],
                       serviceTitle: kServicesTitles[4],
                       serviceDescription: kServicesDescriptions[4],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:folio/sections/openSource/openSourceDesktop.dart';
-import 'package:folio/sections/openSource/openSourceMobile.dart';
+import 'package:folio/sections/portfolio/portfolioDesktop.dart';
+import 'package:folio/sections/portfolio/portfolioMobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class OpenSource extends StatelessWidget {

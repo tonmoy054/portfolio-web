@@ -80,14 +80,16 @@ class _ServiceCardState extends State<ServiceCard> {
             SizedBox(
               height: height * 0.01,
             ),
-            Text(
-              widget.serviceDescription,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
-                  fontSize: height * 0.015,
-                  letterSpacing: 2.0,
-                  fontWeight: FontWeight.w100,
-                  height: width >= 600 ? 2.0 : 0.0),
+            Expanded(
+              child: Text(
+                widget.serviceDescription,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                    fontSize: height * 0.015,
+                    letterSpacing: 2.0,
+                    fontWeight: FontWeight.w100,
+                    height: width < 900 ? 2.3 : 1.5),
+              ),
             )
           ],
         ),

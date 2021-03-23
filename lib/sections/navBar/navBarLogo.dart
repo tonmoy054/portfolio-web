@@ -12,7 +12,7 @@ class NavBarLogo extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "</ ",
+            "< ",
             style: TextStyle(fontSize: height ?? 20),
           ),
           Text(
@@ -20,7 +20,7 @@ class NavBarLogo extends StatelessWidget {
             style: TextStyle(fontFamily: "Agustina", fontSize: height ?? 20),
           ),
           Text(
-            MediaQuery.of(context).size.width >= 1000 ? " >\t\t" : " >",
+            MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
             style: TextStyle(fontSize: height ?? 20),
           )
         ],

@@ -25,7 +25,7 @@ class HomeTab extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.fromLTRB(
-                width * 0.1, width < 740 ? height * 0.03 : height * 0.2, 0, 0),
+                width * 0.1, width < 740 ? height * 0.15 : height * 0.2, 0, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

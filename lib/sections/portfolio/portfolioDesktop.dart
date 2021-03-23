@@ -28,9 +28,9 @@ class OpenSourceDesktop extends StatelessWidget {
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
           ),
           SizedBox(
-            height: height * 0.3,
+            height: width > 1200 ? height * 0.45 : width * 0.2,
             child: ListView.separated(
-              padding: EdgeInsets.symmetric(vertical: 15.0),
+              padding: EdgeInsets.symmetric(vertical: 20.0),
               scrollDirection: Axis.horizontal,
               separatorBuilder: (context, index) {
                 return VerticalDivider(
@@ -41,16 +41,23 @@ class OpenSourceDesktop extends StatelessWidget {
               itemBuilder: (context, index) {
                 return WidgetAnimator(
                   child: ProjectCard(
-                    cardWidth: width < 1200 ? width * 0.25 : width * 0.2,
-                    cardHeight: width < 1200 ? height * 0.28 : height * 0.25,
+                    cardWidth: width < 1200 ? width * 0.25 : width * 0.35,
+                    cardHeight: width < 1200 ? height * 0.28 : height * 0.1,
+                    backImage: kProjectsBanner[index],
                     projectIcon: kProjectsIcons[index],
                     projectTitle: kProjectsTitles[index],
                     projectDescription: kProjectsDescriptions[index],
                     projectLink: kProjectsLinks[index],
+                    bottomWidget: index == 1
+                        ? Image.network(
+                            "https://img.icons8.com/material-sharp/384/ffffff/google-play.png",
+                            height: height * 0.04,
+                          )
+                        : Container(),
                   ),
                 );
               },
-              itemCount: 10,
+              itemCount: 4,
             ),
           ),
           SizedBox(

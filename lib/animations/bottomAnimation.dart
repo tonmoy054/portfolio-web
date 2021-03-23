@@ -44,7 +44,7 @@ class _AnimatorState extends State<Animator>
         return Opacity(
           opacity: animation.value,
           child: Transform.translate(
-            offset: Offset(0.0, (1 - animation.value) * 20),
+            offset: Offset(0.0, -50 + animation.value * 50),
             child: child,
           ),
         );
@@ -62,7 +62,7 @@ wait() {
       duration = Duration();
     });
   }
-  duration += Duration(milliseconds: 100);
+  duration += Duration(milliseconds: 300);
   return duration;
 }
 

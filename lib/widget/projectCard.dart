@@ -11,9 +11,13 @@ class ProjectCard extends StatefulWidget {
   final String projectLink;
   final double cardWidth;
   final double cardHeight;
+  final String backImage;
+  final Widget bottomWidget;
 
   const ProjectCard(
       {Key key,
+      this.backImage,
+      this.bottomWidget,
       this.projectIcon,
       this.projectTitle,
       this.projectDescription,
@@ -28,6 +32,7 @@ class ProjectCard extends StatefulWidget {
 
 class _ProjectCardState extends State<ProjectCard> {
   bool isHover = false;
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -61,46 +66,65 @@ class _ProjectCardState extends State<ProjectCard> {
                     )
                   ]
                 : []),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-            widget.projectIcon != null
-                ? Image.asset(
-                    widget.projectIcon,
-                    height: height * 0.1,
-                  )
-                : Container(),
-            widget.projectIconData != null
-                ? Icon(
-                    widget.projectIconData,
-                    color: kPrimaryColor,
-                    size: height * 0.1,
-                  )
-                : Container(),
-            SizedBox(
-              height: height * 0.02,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                widget.projectIcon != null
+                    ? Image.asset(
+                        widget.projectIcon,
+                        height: height * 0.1,
+                      )
+                    : Container(),
+                widget.projectIconData != null
+                    ? Icon(
+                        widget.projectIconData,
+                        color: kPrimaryColor,
+                        size: height * 0.1,
+                      )
+                    : Container(),
+                SizedBox(
+                  height: height * 0.02,
+                ),
+                Text(
+                  widget.projectTitle,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.montserrat(
+                    fontSize: height * 0.02,
+                    letterSpacing: 1.5,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(
+                  height: height * 0.01,
+                ),
+                Text(
+                  widget.projectDescription,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.montserrat(
+                      fontSize: height * 0.015,
+                      letterSpacing: 2.0,
+                      fontWeight: FontWeight.w100,
+                      height: width >= 600 ? 2.0 : 1.5),
+                ),
+                SizedBox(
+                  height: height * 0.01,
+                ),
+                widget.bottomWidget ?? Container(),
+              ],
             ),
-            Text(
-              widget.projectTitle,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
-                fontSize: height * 0.02,
-                letterSpacing: 2.0,
-                fontWeight: FontWeight.w400,
+            AnimatedOpacity(
+              duration: Duration(milliseconds: 400),
+              opacity: isHover ? 0.0 : 1.0,
+              child: FittedBox(
+                fit: BoxFit.fill,
+                child: widget.backImage != null
+                    ? Image.asset(widget.backImage)
+                    : Container(),
               ),
             ),
-            SizedBox(
-              height: height * 0.01,
-            ),
-            Text(
-              widget.projectDescription,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
-                  fontSize: height * 0.015,
-                  letterSpacing: 2.0,
-                  fontWeight: FontWeight.w100,
-                  height: width >= 600 ? 2.0 : 0.0),
-            )
           ],
         ),
       ),

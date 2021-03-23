@@ -18,7 +18,7 @@ class HomeDesktop extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: width < 1200 ? height * 0.1 : height * 0.05,
+            top: width < 1200 ? height * 0.15 : height * 0.1,
             right: width * 0.01,
             child: Opacity(
               opacity: 0.9,

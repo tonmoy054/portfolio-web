@@ -26,11 +26,11 @@ class _HomeMobileState extends State<HomeMobile> {
             right: -width * 0.3,
             child: Opacity(
               opacity: 0.7,
-              child: Image.asset('assets/1.png', height: height * 0.75),
+              child: Image.asset('assets/1.png', height: height * 0.65),
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(width * 0.1, height * 0.03, 0, 0),
+            margin: EdgeInsets.fromLTRB(width * 0.07, height * 0.12, 0, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -39,7 +39,9 @@ class _HomeMobileState extends State<HomeMobile> {
                   children: [
                     Text(
                       "HEY THERE! ",
-                      style: GoogleFonts.montserrat(fontSize: height * 0.025, fontWeight: FontWeight.w200),
+                      style: GoogleFonts.montserrat(
+                          fontSize: height * 0.025,
+                          fontWeight: FontWeight.w200),
                     ),
                     Image.asset(
                       "assets/hi.gif",
@@ -48,7 +50,7 @@ class _HomeMobileState extends State<HomeMobile> {
                   ],
                 ),
                 SizedBox(
-                  height: height * 0.03,
+                  height: height * 0.01,
                 ),
                 Text(
                   "Muhammad",
@@ -92,7 +94,7 @@ class _HomeMobileState extends State<HomeMobile> {
                         icon: kSocialIcons[i],
                         socialLink: kSocialLinks[i],
                         height: height * 0.03,
-                        horizontalPadding: width * 0.01,
+                        horizontalPadding: 2.0,
                       )
                   ],
                 )

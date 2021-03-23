@@ -66,7 +66,7 @@ class AboutTab extends StatelessWidget {
                 child: Container(),
               ),
               NavBarLogo(
-                height: height * 0.05,
+                height: height * 0.04,
               )
             ],
           )

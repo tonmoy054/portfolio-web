@@ -4,7 +4,7 @@ import 'package:folio/sections/about/about.dart';
 import 'package:folio/sections/contact/contact.dart';
 import 'package:folio/sections/home/home.dart';
 import 'package:folio/sections/navBar/navBarLogo.dart';
-import 'package:folio/sections/openSource/openSource.dart';
+import 'package:folio/sections/portfolio/portfolio.dart';
 import 'package:folio/sections/services/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
