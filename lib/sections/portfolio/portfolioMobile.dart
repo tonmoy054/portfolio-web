@@ -4,7 +4,7 @@ import 'package:folio/constants.dart';
 import 'package:folio/widget/projectCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class OpenSourceMobile extends StatelessWidget {
+class PortfolioMobileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

@@ -4,7 +4,7 @@ import 'package:folio/widget/projectCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:folio/constants.dart';
 
-class OpenSourceDesktop extends StatelessWidget {
+class PortfolioDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

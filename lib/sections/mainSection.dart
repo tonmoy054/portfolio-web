@@ -55,7 +55,7 @@ class _MainPageState extends State<MainPage> {
     } else if (i == 2) {
       return Services();
     } else if (i == 3) {
-      return OpenSource();
+      return Portfolio();
     } else if (i == 4) {
       return Contact();
     } else if (i == 5) {

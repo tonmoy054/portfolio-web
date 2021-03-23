@@ -7,8 +7,8 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: ContactMobile(),
-      tablet: ContactMobile(),
+      mobile: ContactMobileTab(),
+      tablet: ContactMobileTab(),
       desktop: ContactDesktop(),
     );
   }
