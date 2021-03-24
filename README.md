@@ -4,6 +4,17 @@ Designed live portfolio using Flutter 2.0. Available for **Android** and **Web**
 
 <img src="https://user-images.githubusercontent.com/43790152/112185787-5ce1a300-8c22-11eb-80af-271f674f8f24.png">
 
+## 💻 How to install?
+Before these steps make sure you have `flutter 2.0`
+
+```
+git clone https://github.com/m-hamzashakeel/DevFolio
+cd DevFolio
+flutter packages get
+flutter config --enable-web
+flutter run -d chrome
+```
+
 ## 🔗 Useful links
 
 🌐 Web App: https://m-hamzashakeel.github.io/folio
@@ -14,7 +25,7 @@ Designed live portfolio using Flutter 2.0. Available for **Android** and **Web**
 
 ## 👀 Looks
 
-<img src="https://user-images.githubusercontent.com/43790152/111952323-c8365280-8b06-11eb-9c65-747b5001340a.PNG">
+<img src="https://user-images.githubusercontent.com/43790152/111952323-c8365280-8b06-11eb-9c65-747b5001340a.PNG"> <img height="800px" src="https://user-images.githubusercontent.com/43790152/112265455-57bd3c00-8c94-11eb-870a-13c9157b7e1b.gif">
 
 ## 🔑 License
 - This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
