@@ -23,9 +23,10 @@ flutter run -d chrome
 
 📙 Article: https://mhamzadev.medium.com/folio-responsive-portfolio-using-flutter-2-0-86ae3e6cce4f
 
-## 👀 Looks
+# 👀 Looks
 
-<img src="https://user-images.githubusercontent.com/43790152/111952323-c8365280-8b06-11eb-9c65-747b5001340a.PNG"> <img height="800px" src="https://user-images.githubusercontent.com/43790152/112265455-57bd3c00-8c94-11eb-870a-13c9157b7e1b.gif">
+<img src="https://user-images.githubusercontent.com/43790152/111952323-c8365280-8b06-11eb-9c65-747b5001340a.PNG"> <img src="https://user-images.githubusercontent.com/43790152/112266079-5a6c6100-8c95-11eb-9b68-2121e37b0851.gif"> <img src="https://user-images.githubusercontent.com/43790152/112265455-57bd3c00-8c94-11eb-870a-13c9157b7e1b.gif"> <img src="https://user-images.githubusercontent.com/43790152/112266085-5ccebb00-8c95-11eb-9a06-67810e894471.gif">
+
 
 ## 🔑 License
 - This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
