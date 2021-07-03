@@ -60,7 +60,7 @@ class HomeDesktop extends StatelessWidget {
                   height: height * 0.04,
                 ),
                 Text(
-                  "Muhammad",
+                  "Mahamudul Hassan",
                   style: GoogleFonts.montserrat(
                       fontSize:
                           width < 1200 ? height * 0.085 : height * 0.095,
@@ -68,7 +68,7 @@ class HomeDesktop extends StatelessWidget {
                       letterSpacing: 4.0),
                 ),
                 Text(
-                  "Hamza",
+                  "Tonmoy",
                   style: GoogleFonts.montserrat(
                       fontSize:
                           width < 1200 ? height * 0.085 : height * 0.095,
@@ -92,9 +92,11 @@ class HomeDesktop extends StatelessWidget {
                               fontSize: height * 0.03,
                               fontWeight: FontWeight.w200),
                           text: [
-                            " Flutter Developer",
-                            " Technical Writer",
-                            " UI/UX Enthusiast"
+                            " Developer",
+                            " Entrepreneur",
+                            "Resolution Fellow"
+
+
                           ]),
                     ],
                   ),

@@ -103,7 +103,7 @@ class _ProjectCardState extends State<ProjectCard> {
                 Text(
                   widget.projectDescription,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.hindSiliguri(
                       fontSize: height * 0.015,
                       letterSpacing: 2.0,
                       fontWeight: FontWeight.w100,

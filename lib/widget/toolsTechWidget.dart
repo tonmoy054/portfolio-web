@@ -12,11 +12,11 @@ class ToolTechWidget extends StatelessWidget {
       child: Row(
         children: [
           Icon(
-            Icons.play_arrow,
+            Icons.album_outlined,
             color: kPrimaryColor,
             size: MediaQuery.of(context).size.height * 0.02,
           ),
-          Text(" $techName")
+          Text(" $techName", style: TextStyle(fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.height * 0.025),)
         ],
       ),
     );

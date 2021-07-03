@@ -8,7 +8,7 @@ class AboutMeText extends StatelessWidget {
   const AboutMeText({Key key, this.textAlign, this.fontSize}) : super(key: key);
 
   TextStyle _textStyle(double fSize, bool bold) {
-    return GoogleFonts.montserrat(
+    return GoogleFonts.poppins(
       fontSize: fSize ?? 14,
       fontWeight: !bold ? FontWeight.w100 : FontWeight.w400,
       letterSpacing: 1.0,
@@ -24,41 +24,13 @@ class AboutMeText extends StatelessWidget {
       text: TextSpan(children: [
         TextSpan(
           text:
-              "Hi There! I'm Hamza, a Flutter developer, technial writer and open source contributor based in Pakistan.\n\nI have been developing mobile apps for over 1.5 years now, I develop apps with appealing UI and robust performance. I have worked in teams for various startups and helped them in launching their prototypes, as open source contributor at GitHub and got valuable learning experience.\n\nRight now I'm in final year of my undergraduate degree at ",
+              "Tonmoy is a tech enthusiast and emerging entrepreneur who believes technology can make the biggest social impact for betterment. In addition to Kloudoop, he is also the co-founder of a healthcare start-up project called ‘Cure’. Tonmoy believes, through ‘Cure’, they can make a radical change in the healthcare industry of Bangladesh. Tonmoy has been awarded and recognized in the USA, JAPAN, MALAYSIA & DENMARK as an entrepreneur. Also, he has been honored as a Fellow of The Resolution Project, USA. He is also serving as an innovation Director at YSI Bangladesh (Young Sustainable Impact), a Norwegian-based organization for young entrepreneurs. Building a sustainable world and a better future is his motto. ",
           style: MediaQuery.of(context).size.width < 600
-              ? _textStyle(fontSize, false)
+              ? _textStyle(fontSize, false,)
               : _textStyle(fontSize + 2, false),
+
         ),
-        TextSpan(
-          text: "COMSATS University Islamabad",
-          style: MediaQuery.of(context).size.width < 600
-              ? _textStyle(fontSize, true)
-              : _textStyle(fontSize + 2, true),
-        ),
-        TextSpan(
-          text: ", active ",
-          style: MediaQuery.of(context).size.width < 600
-              ? _textStyle(fontSize, false)
-              : _textStyle(fontSize + 2, false),
-        ),
-        TextSpan(
-          text: "Google Developer Student Clubs (DSC) Lead,",
-          style: MediaQuery.of(context).size.width < 600
-              ? _textStyle(fontSize, true)
-              : _textStyle(fontSize + 2, true),
-        ),
-        TextSpan(
-          text: " and",
-          style: MediaQuery.of(context).size.width < 600
-              ? _textStyle(fontSize, false)
-              : _textStyle(fontSize + 2, false),
-        ),
-        TextSpan(
-          text: " Leading Flutter Islamabad, Pakistan",
-          style: MediaQuery.of(context).size.width < 600
-              ? _textStyle(fontSize, true)
-              : _textStyle(fontSize + 2, true),
-        )
+
       ]),
     );
   }

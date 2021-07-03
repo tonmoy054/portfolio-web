@@ -37,14 +37,16 @@ class AboutDesktop extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                flex: 3,
+                flex: 1,
                 child: AboutMeText(
                   fontSize: width <= 1100 ? 14 : 16,
                 ),
               ),
               (width <= 950 && width >= 1185)
                   ? Container()
-                  : Expanded(child: Container()),
+                  : Expanded(
+
+                  child: Container()),
               width >= 1185 ? Expanded(child: ToolsTech()) : ToolsTech()
             ],
           ),
