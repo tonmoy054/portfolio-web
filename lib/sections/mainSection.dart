@@ -30,8 +30,8 @@ class _MainPageState extends State<MainPage> {
   final List<String> _sectionsName = [
     "Home",
     "About",
-    "Services",
-    "Projects",
+    "Skills",
+    "News",
     "Contact"
   ];
 
@@ -172,7 +172,7 @@ class _MainPageState extends State<MainPage> {
                   side: BorderSide(color: kPrimaryColor)),
               onPressed: () {
                 html.window.open(
-                    'https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE',
+                    'https://drive.google.com/file/d/13Rg4-tvRyQ9Td9yNre7kvARQNrB-HrTT/view?usp=sharing',
                     "pdf");
               },
               child: Text(
@@ -211,7 +211,7 @@ class _MainPageState extends State<MainPage> {
                     side: BorderSide(color: kPrimaryColor)),
                 onPressed: () {
                   launchURL(
-                      "https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE");
+                      "https://drive.google.com/file/d/13Rg4-tvRyQ9Td9yNre7kvARQNrB-HrTT/view?usp=sharing");
                 },
                 child: ListTile(
                   leading: Icon(

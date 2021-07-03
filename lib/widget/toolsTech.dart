@@ -9,7 +9,7 @@ class ToolsTech extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Technologies I have worked with:\n"),
+        Text("Awards and Achievement:\n"),
         Row(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,13 +20,14 @@ class ToolsTech extends StatelessWidget {
                   for (int i = 0; i < kTools.length; i++)
                     ToolTechWidget(
                       techName: kTools[i],
+                      fontSize: width <= 1100 ? 8 : 16,
                     ),
-                  for (int i = 0; i < kTools1.length; i++)
-                    (width >= 600 && width <= 950)
-                        ? ToolTechWidget(
-                            techName: kTools1[i],
-                          )
-                        : Container(),
+                  // for (int i = 0; i < kTools1.length; i++)
+                  //   (width >= 600 && width <= 950)
+                  //       ? ToolTechWidget(
+                  //           techName: kTools1[i],
+                  //         )
+                  //       : Container(),
                 ],
               ),
               (width <= 600 || width >= 950)
@@ -38,10 +39,10 @@ class ToolsTech extends StatelessWidget {
                   ? Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        for (int i = 0; i < kTools1.length; i++)
-                          ToolTechWidget(
-                            techName: kTools1[i],
-                          ),
+                        // for (int i = 0; i < kTools1.length; i++)
+                        //   ToolTechWidget(
+                        //     techName: kTools1[i],
+                        //   ),
                       ],
                     )
                   : Container(),

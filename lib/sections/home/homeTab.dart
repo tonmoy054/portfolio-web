@@ -20,7 +20,7 @@ class HomeTab extends StatelessWidget {
             right: width < 740 ? -width * 0.2 : -width * 0.1,
             child: Opacity(
               opacity: 0.8,
-              child: Image.asset('assets/1.png', height: height * 0.75),
+              child: Image.asset('assets/1.png', height: height * 0.98),
             ),
           ),
           Container(
@@ -47,14 +47,14 @@ class HomeTab extends StatelessWidget {
                   height: height * 0.04,
                 ),
                 Text(
-                  "Muhammad",
+                  "Mahamudul Hassan",
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.07,
                       fontWeight: FontWeight.w100,
                       letterSpacing: 1.5),
                 ),
                 Text(
-                  "Hamza",
+                  "Tonmoy",
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.07, fontWeight: FontWeight.w500),
                 ),
@@ -71,9 +71,9 @@ class HomeTab extends StatelessWidget {
                             fontSize: height * 0.03,
                             fontWeight: FontWeight.w200),
                         text: [
-                          " Flutter Developer",
-                          " Technical Writer",
-                          " UI/UX Enthusiast"
+                          " Developer",
+                          " Entrepreneur",
+                          "Resolution Fellow"
                         ]),
                   ],
                 ),

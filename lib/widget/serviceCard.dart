@@ -63,7 +63,7 @@ class _ServiceCardState extends State<ServiceCard> {
           children: [
             Image.asset(
               widget.serviceIcon,
-              height: height * 0.1,
+              height: height * 0.15,
             ),
             SizedBox(
               height: height * 0.02,
@@ -71,7 +71,7 @@ class _ServiceCardState extends State<ServiceCard> {
             Text(
               widget.serviceTitle,
               textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
+              style: GoogleFonts.poppins(
                 fontSize: height * 0.02,
                 letterSpacing: 2.0,
                 fontWeight: FontWeight.w400,
@@ -84,7 +84,7 @@ class _ServiceCardState extends State<ServiceCard> {
               child: Text(
                 widget.serviceDescription,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.montserrat(
+                style: GoogleFonts.poppins(
                     fontSize: height * 0.015,
                     letterSpacing: 2.0,
                     fontWeight: FontWeight.w100,

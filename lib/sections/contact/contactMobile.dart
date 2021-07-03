@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/widget/projectCard.dart';
+import 'package:folio/widget/serviceCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContactMobileTab extends StatelessWidget {
@@ -30,11 +31,11 @@ class ContactMobileTab extends StatelessWidget {
             itemBuilder: (BuildContext context, int itemIndex, int i) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: ProjectCard(
+              child: ServiceCard(
                 cardWidth: width > 480 ? width * 0.5 : width * 0.8,
-                projectIconData: kContactIcons[i],
-                projectTitle: kContactTitles[i],
-                projectDescription: kContactDetails[i],
+                serviceIcon: kContactIcons[i],
+                serviceTitle: kContactTitles[i],
+                serviceDescription: kContactDetails[i],
               ),
             ),
             options: CarouselOptions(

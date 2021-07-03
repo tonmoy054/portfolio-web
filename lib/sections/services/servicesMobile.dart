@@ -35,7 +35,7 @@ class ServiceMobile extends StatelessWidget {
                 serviceIcon: kServicesIcons[i],
                 serviceTitle: kServicesTitles[i],
                 serviceDescription: kServicesDescriptions[i],
-                serviceLink: kServicesLinks[i],
+
               ),
             ),
             options: CarouselOptions(

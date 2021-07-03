@@ -8,19 +8,16 @@ Color kPrimaryColor = Color(0xffC0392B);
 const kSocialIcons = [
   "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
   "https://img.icons8.com/ios-glyphs/480/ffffff/instagram-new.png",
-  "https://img.icons8.com/android/480/ffffff/twitter.png",
   "https://img.icons8.com/metro/308/ffffff/linkedin.png",
   "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-  "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
+
 ];
 
 const kSocialLinks = [
-  "https://facebook.com/mhamzadev",
-  "https://instagram.com/mhamzadev",
-  "https://twitter.com/mhamzadev",
-  "https://linkedin.com/in/mhamzadev",
-  "https://github.com/m-hamzashakeel",
-  "https://mhamzadev.medium.com"
+  "https://www.facebook.com/MahamudulHassanTonmoy",
+  "https://www.instagram.com/m.hassan_tonmoy",
+  "https://www.linkedin.com/in/mahamudul-hassan-tonmoy",
+  "https://github.com/tonmoy054",
 ];
 
 // URL Launcher
@@ -29,120 +26,105 @@ void launchURL(String _url) async =>
 
 // Community
 final kCommunityLogo = [
-  'assets/cui.png',
-  'assets/flutterIsl.png',
-  'assets/dsc.png'
+  'assets/cure.png',
+  'assets/kloudoop.png',
+
 ];
 
 final kCommunityLinks = [
-  "https://www.comsats.edu.pk/",
-  "https://web.facebook.com/FlutterIslamabadPakistan/",
-  "https://dsc.community.dev/comsats-university-islamabad/"
+  "https://cureapp.co/",
+  "https://www.kloudoop.com/",
+
 ];
 
 // Tools & Tech
-final kTools = ["Flutter", "Dart", "Python", "Java", "C++"];
+final kTools = ["Best Idea Innovation Award, Japan", "SVC Winner at Harvard University, USA", "Resolution Fellow", "Top 20 Best Project, Malaysia", "2nd Runner Up at Unleash Hacks"];
 
-final kTools1 = ["HTML", "CSS", "Bootstrap", "React-native"];
+// final kTools1 = ["", "CSS", "Bootstrap", "React-native"];
 
 // services
 final kServicesIcons = [
-  "assets/services/app.png",
-  "assets/services/ui.png",
-  "assets/services/rapid.png",
-  "assets/services/blog.png",
-  "assets/services/open.png",
+  "assets/services/s1.png",
+  "assets/services/s2.png",
+  "assets/services/s3.png",
+  "assets/services/s4.png",
+  "assets/services/s5.png",
 ];
 
 final kServicesTitles = [
-  "Full App Development",
-  "UI/UX Designing",
-  "Rapid Prototyping",
-  "Technical Blog Writing",
-  "Open Source - GitHub",
+  "App Development",
+  "Web Development",
+  "UI/UX Enthusiast",
+  "Entrepreneurship",
+  "Social Impact",
 ];
 
 final kServicesDescriptions = [
-  "For now, I can only develop Android Apps using Flutter, that's because I don't own a MacBook right now so can't test or debug apps for iOS. Hopefully this missing piece will be filled soon :)",
-  "Although I'm mainly a flutter developer but I do care about the UI/UX for my client. Hence, I also do UI designing for applications. So, feel free to ask me for getting you UI/UX for your apps",
-  "Having a startup idea? Or maybe just want a prototype for your clients? With Flutter I can get you basic version of your app in no time and you are good to go for your project in future.",
-  "I have been writing technical blogs on Medium for over a year now. So, I can get you technical blogs with awesome header images, interesting topics and SEO friendly.\nCheck out my Medium profile @mhamzadev",
-  "Working as open source contributor on GitHub with 200+ stars and numerous forks on various projects liked and shared by other developers.\nCheck out my GitHub Profile @m-hamzashakeel",
+  "I am focused on Cross-Platform App Development, and flutter is my choice. I love to bring my imagination to live",
+  "As a Flutter developer I have experience in Web development as well. Which helps me to create a hybrid ecosystem",
+  "Although I'm a developer but I do care about the UI/UX. I am UI/UX enthusiast and I believe smooth design can enhance the experience",
+  "I have been working as entrepreneur since 2018. I believe through this growing trend of startup. in the near future we will have some of our own impacting globally",
+  "I am more concerned about how we can make positive social impact with technology, I have worked with three international organisation who work for the social impact",
 ];
 
 final kServicesLinks = [
-  "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
-  "https://www.fiverr.com/hamza6shakeel/get-you-modern-ui-design-using-adobe-xd",
-  "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
-  "https://mhamzadev.medium.com",
-  "https://github.com/m-hamzashakeel"
+  // "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
+  // "https://www.fiverr.com/hamza6shakeel/get-you-modern-ui-design-using-adobe-xd",
+  // "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
+  // "https://mhamzadev.medium.com",
+  // "https://github.com/m-hamzashakeel"
 ];
 
 // projects
 final kProjectsBanner = [
-  "assets/projects/medkitB.png",
-  "assets/projects/quranB.png",
-  "assets/projects/hereiamB.png",
-  "assets/projects/covidB.png",
+  "assets/projects/kkus.jpg",
+  "assets/projects/channeli.png",
+  "assets/projects/ds.jpg",
+  "assets/projects/pa.jpeg",
+
 ];
 
 final kProjectsIcons = [
-  "assets/projects/medkit.png",
-  "assets/projects/quran.png",
-  "assets/projects/hereiam.png",
-  "assets/projects/covid.png",
-  "assets/projects/messenger.png",
-  "assets/projects/flutter.png",
-  "assets/projects/earbender.png",
-  "assets/projects/java.png",
-  "assets/projects/android.png",
-  "assets/services/open.png",
+  "assets/projects/kk.png",
+  "assets/projects/channelilogo.png",
+  "assets/projects/dslogo.png",
+  "assets/projects/palogo.png",
+
+
+
 ];
 
 final kProjectsTitles = [
-  "MedKit",
-  "The Holy Qur'an",
-  "Here I Am",
-  "COVID-19",
-  "Messenger Chat Head UI",
-  "flutter.dev - Flutter Web",
-  "Earbender",
-  "File Transfer Protocol",
-  "My Order",
-  "Hidev",
+  "Kaler Kantho",
+  "Channel I",
+  "The Daily Star",
+  "Prothom Alo",
+
+
 ];
 
 final kProjectsDescriptions = [
-  "A Phramacy app developed using Flutter powered with Firebase as database. It let's you find medicines for some common diseases to save your time and cost.",
-  "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter The data is fetched using API. Information about API is given at the bottom of README.md",
-  "Here I am is an Alert app that Sends alert SMS holding your location (Address and Google Maps) to your loved ones.",
-  "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live.",
-  "Tried to clone the famous Chat Heads by Facebook Messenger using Flutter. Its basically in-app not exactly like the original chat head.",
-  "fFlutter Official Site clone using Flutter Web. Try the live site here. For the time being its not responsive fully so there might be issues considering the layout on your screen.",
-  "A concept of Music App developed using Flutter. Having functionality of playing Audio.",
-  "GIt was my End semester project i.e. creating this FTP having a user interface in Java. It simply sends file from Client to Server but not the other way around.",
-  "A concept app for self-services at various restaurants now a days. More like a Restaurant Ordering System.",
-  "Its my end semester project for a course Web Technologies. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
+  "হার্ভার্ডে বিশ্বচ্যাম্পিয়ন বাংলাদেশের তিন তরুণ",
+  " Amader Shontanera | Ep-16",
+  "CURE impresses at Harvard National Model United Nations 2019",
+  "চ্যাম্পিয়ন বাংলাদেশের ‘গিকি হেড’",
+
+
+
 ];
 
 final kProjectsLinks = [
-  "https://github.com/m-hamzashakeel/MedKit-Pharmacy-App-Using-Flutter",
-  "https://github.com/m-hamzashakeel/The_Holy_Quran_App",
-  "https://github.com/m-hamzashakeel/Here-I-Am-Alert-App",
-  "https://github.com/m-hamzashakeel/Covid19-Tracker-App",
-  "https://github.com/m-hamzashakeel/Messenger-Chat-Head-Flutter-UI",
-  "https://github.com/m-hamzashakeel/flutter.dev-Flutter-Web-Clone",
-  "https://github.com/m-hamzashakeel/Earbender_Music_App",
-  "https://github.com/m-hamzashakeel/FTP_GUI_Java",
-  "https://github.com/m-hamzashakeel/My-Order-Resturant-Ordering-System",
-  "https://github.com/m-hamzashakeel/Hidev_Web",
+  "https://www.kalerkantho.com/print-edition/last-page/2020/03/03/881223?fbclid=IwAR3CDoPcOWutlmUGJzECssrp9r7YUnkh69yjiv9BZDyRQ9h1OIOrMFnR_14",
+  "https://www.youtube.com/watch?v=odw-uQ3cnX0",
+  "https://www.thedailystar.net/star-youth/news/cure-impresses-harvard-national-model-united-nations-2019-1742464",
+  "https://www.prothomalo.com/life/%E0%A6%9A%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A7%9F%E0%A6%A8-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A7%87%E0%A6%B0-%E2%80%98%E0%A6%97%E0%A6%BF%E0%A6%95%E0%A6%BF-%E0%A6%B9%E0%A7%87%E0%A6%A1%E2%80%99#bypass-sw",
 ];
 
 // Contact
 final kContactIcons = [
-  Icons.home,
-  Icons.phone,
-  Icons.mail,
+  "assets/c1.png",
+  "assets/c2.png",
+  "assets/c3.png",
 ];
 
 final kContactTitles = [
@@ -152,7 +134,7 @@ final kContactTitles = [
 ];
 
 final kContactDetails = [
-  "Attock, Pakistan",
-  "(+92) 346 0159889",
-  "hamza.6.shakeel@gmail.com"
+  "Dhaka, Bangladesh",
+  "(+880) 1303 142 432",
+  "tonmoy.hasan@icloud.com"
 ];

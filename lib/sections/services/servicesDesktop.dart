@@ -24,7 +24,7 @@ class ServiceDesktop extends StatelessWidget {
             ),
           ),
           Text(
-            "I may not be perfect, but I'm surely of some help :)\n\n",
+            "My passion and life\n\n",
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
           ),
           Column(
@@ -41,7 +41,7 @@ class ServiceDesktop extends StatelessWidget {
                       serviceIcon: kServicesIcons[0],
                       serviceTitle: kServicesTitles[0],
                       serviceDescription: kServicesDescriptions[0],
-                      serviceLink: kServicesLinks[0],
+
                     ),
                   ),
                   SizedBox(
@@ -54,7 +54,7 @@ class ServiceDesktop extends StatelessWidget {
                       serviceIcon: kServicesIcons[1],
                       serviceTitle: kServicesTitles[1],
                       serviceDescription: kServicesDescriptions[1],
-                      serviceLink: kServicesLinks[1],
+
                     ),
                   ),
                   SizedBox(
@@ -67,7 +67,7 @@ class ServiceDesktop extends StatelessWidget {
                       serviceIcon: kServicesIcons[2],
                       serviceTitle: kServicesTitles[2],
                       serviceDescription: kServicesDescriptions[2],
-                      serviceLink: kServicesLinks[2],
+
                     ),
                   ),
                 ],
@@ -85,7 +85,7 @@ class ServiceDesktop extends StatelessWidget {
                       serviceIcon: kServicesIcons[3],
                       serviceTitle: kServicesTitles[3],
                       serviceDescription: kServicesDescriptions[3],
-                      serviceLink: kServicesLinks[3],
+
                     ),
                   ),
                   SizedBox(
@@ -98,7 +98,7 @@ class ServiceDesktop extends StatelessWidget {
                       serviceIcon: kServicesIcons[4],
                       serviceTitle: kServicesTitles[4],
                       serviceDescription: kServicesDescriptions[4],
-                      serviceLink: kServicesLinks[4],
+
                     ),
                   ),
                 ],

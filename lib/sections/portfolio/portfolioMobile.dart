@@ -13,7 +13,7 @@ class PortfolioMobileTab extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "\nPortfolio",
+            "\nNews & Interviews",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.06,
               fontWeight: FontWeight.w100,
@@ -21,12 +21,12 @@ class PortfolioMobileTab extends StatelessWidget {
             ),
           ),
           Text(
-            "Here are few samples of my previous work :)\n\n",
+            "Featured Published News and interviews\n\n",
             style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
             textAlign: TextAlign.center,
           ),
           CarouselSlider.builder(
-            itemCount: 10,
+            itemCount: 4,
             itemBuilder: (BuildContext context, int itemIndex, int i) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -56,7 +56,7 @@ class PortfolioMobileTab extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5.0),
                 side: BorderSide(color: kPrimaryColor)),
             onPressed: () {
-              launchURL("https://github.com/m-hamzashakeel");
+              launchURL("https://cureapp.co/newsroom-cure/");
             },
             child: Text(
               "See More",

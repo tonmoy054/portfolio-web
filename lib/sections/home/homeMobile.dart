@@ -53,14 +53,14 @@ class _HomeMobileState extends State<HomeMobile> {
                   height: height * 0.01,
                 ),
                 Text(
-                  "Muhammad",
+                  "Mahamudul Hassan",
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.055,
                       fontWeight: FontWeight.w100,
                       letterSpacing: 1.1),
                 ),
                 Text(
-                  "Hamza",
+                  "Tonmoy",
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.055, fontWeight: FontWeight.w500),
                 ),
@@ -77,9 +77,9 @@ class _HomeMobileState extends State<HomeMobile> {
                             fontSize: height * 0.03,
                             fontWeight: FontWeight.w200),
                         text: [
-                          " Flutter Developer",
-                          " Technical Writer",
-                          " UI/UX Enthusiast"
+                          " Developer",
+                          " Entrepreneur",
+                          "Resolution Fellow"
                         ]),
                   ],
                 ),
